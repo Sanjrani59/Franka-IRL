@@ -128,12 +128,12 @@ Open a **new terminal** (or ensure previous sourcing is cleared) and run:
 source /opt/ros/humble/setup.bash
 
 # 2. Source your Franka workspace overlay
-source ~/ros2_franka_ws/install/setup.bash
+source ~/ros2_franka/install/setup.bash
 ```
 
 **Tip:** To avoid sourcing manually in every new terminal, you can add the workspace sourcing line to your shell's startup script (e.g., `.bashrc`):
 ```bash
-echo "source ~/ros2_franka_ws/install/setup.bash" >> ~/.bashrc
+echo "source ~/ros2_franka/install/setup.bash" >> ~/.bashrc
 # Remember to also have the main ROS 2 source line in your .bashrc or source it manually first.
 ```
 
@@ -152,7 +152,7 @@ The specific launch command depends on the MoveIt configuration package name tha
 ros2 launch franka_fr3_moveit_config demo.launch.py load_gripper:=true
 ```
 
-* **Check Package Name:** If this fails with "Package not found", double-check the exact name of the `_moveit_config` package built in your `~/ros2_franka/install/` directory (e.g., `franka_panda_moveit_config`).
+* **Check Package Name:** If this fails with "Package not found", double-check the exact name of the `_moveit_config` package built in your `~/ros2_franka/install/` directory (e.g., `franka_fr3_moveit_config`).
 * **`load_gripper:=true`:** This argument tells the launch file to also load the configuration for the Franka Hand/Gripper. Set to `false` if you don't need the gripper.
 
 If successful, RViz should open, displaying the Franka robot model in its default state.
