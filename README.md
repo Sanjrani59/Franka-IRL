@@ -148,6 +148,8 @@ The specific launch command depends on the MoveIt configuration package name tha
 ```bash
 # Ensure your environment is sourced correctly in this terminal!
 
+ros2 launch franka_fr3_moveit_config moveit.launch.py robot_ip:=dont-care load_gripper:=true use_fake_hardware:=true
+
 # Launch the demo for FR3 (adjust package name if needed for Panda)
 ros2 launch franka_fr3_moveit_config demo.launch.py load_gripper:=true
 ```
