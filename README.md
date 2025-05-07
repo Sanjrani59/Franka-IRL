@@ -150,9 +150,8 @@ The specific launch command depends on the MoveIt configuration package name tha
 
 ros2 launch franka_fr3_moveit_config moveit.launch.py robot_ip:=dont-care load_gripper:=true use_fake_hardware:=true
 
-# Launch the demo for FR3 (adjust package name if needed for Panda)
-ros2 launch franka_fr3_moveit_config demo.launch.py load_gripper:=true
 ```
+
 
 * **Check Package Name:** If this fails with "Package not found", double-check the exact name of the `_moveit_config` package built in your `~/ros2_franka/install/` directory (e.g., `franka_fr3_moveit_config`).
 * **`load_gripper:=true`:** This argument tells the launch file to also load the configuration for the Franka Hand/Gripper. Set to `false` if you don't need the gripper.
@@ -162,6 +161,10 @@ If successful, RViz should open, displaying the Franka robot model in its defaul
 ---
 
 ## Basic Usage in RViz
+```bash
+ Launch the demo for FR3 (adjust package name if needed for Panda)
+ros2 launch franka_fr3_moveit_config demo.launch.py load_gripper:=true
+```
 
 Once RViz is running with the robot model and the MoveIt `MotionPlanning` panel:
 
