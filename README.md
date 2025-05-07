@@ -144,6 +144,11 @@ echo "source ~/ros2_franka/install/setup.bash" >> ~/.bashrc
 With the environment correctly sourced, you can now launch the MoveIt simulation using RViz with fake controllers.
 
 The specific launch command depends on the MoveIt configuration package name that was built (which depends on the `franka_ros2` version/branch). Based on our previous interaction, `franka_fr3_moveit_config` was identified.
+You can use bringup setup for running the simulation on Rviz
+``` bash
+ros2 launch franka_bringup franka.launch.py arm_id:=fr3 robot_ip:=dont-care use_rviz:=true load_gripper:=true use_fake_hardware:=true
+```
+Use the moveit configuration for this purpose
 
 ```bash
 # Ensure your environment is sourced correctly in this terminal!
